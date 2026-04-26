@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>청소일지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="intro-body">
+
+  <div class="intro-wrap" onclick="startLoading()">
+    <img src="logo.png" class="intro-logo" alt="청소일지 로고">
+    <p class="click-text">클릭하면 접속됩니다.</p>
+  </div>
+
+  <div class="loading-wrap" id="loading">
+    <div class="loader"></div>
+    <p>청소일지 접속 중...</p>
+  </div>
+
+  <script>
+    function startLoading() {
+      document.querySelector('.intro-wrap').style.display = 'none';
+      document.getElementById('loading').style.display = 'flex';
+
+      setTimeout(() => {
+        location.href = "main.html";
+      }, 1800);
+    }
+    function startLoading() {
+  const wrap = document.querySelector('.intro-wrap');
+
+  wrap.style.transform = "scale(0.95)";
+  wrap.style.opacity = "0.6";
+
+  setTimeout(() => {
+    wrap.style.display = 'none';
+    document.getElementById('loading').style.display = 'flex';
+  }, 300);
+
+  setTimeout(() => {
+    location.href = "main.html";
+  }, 1800);
+}
+  </script>
+
+</body>
+</html>
