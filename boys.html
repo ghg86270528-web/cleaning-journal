@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고용 안내 | 청소일지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="청소일지 로고">
+  </div>
+
+  <nav>
+    <a href="main.html">생활 청소</a>
+    <a>이사전문 청소</a>
+    <a>건물관리·청소</a>
+    <a>어린이 돌봄</a>
+    <a>심부름·알바</a>
+    <a href="secret.html">비밀알바</a>
+    <a>전체 서비스</a>
+    <a href="https://example.com">안심/신뢰연결</a>
+  </nav>
+</header>
+
+<main class="hire-main">
+    <a href="main.html" class="back-btn">← 메인으로 돌아가기</a>
+
+  <section class="title-area">
+    <div>
+      <span class="popular">Master</span>
+      <span class="hot">PROFILE</span>
+    </div>
+    <h1>고용안내</h1>
+    <p class="sub-text">프리미엄 입주청소 고객 프로필을 확인하세요.</p>
+  </section>
+
+  <div class="boy-tabs">
+    <button onclick="showBoy('hajin')" class="active">윤하진</button>
+    <button onclick="showBoy('boy2')">이휘로</button>
+    <button onclick="showBoy('boy3')">???</button>
+  </div>
+
+  <section class="profile-card">
+
+    <div class="profile-img-box">
+      <img id="boyImage" src="hajin.png" alt="남주 이미지">
+    </div>
+
+    <div class="profile-info">
+      <h2 id="boyName">윤하진</h2>
+      <p class="profile-line" id="boyTag">완벽한 공간을 유지하려는 고용주</p>
+
+      <div class="info-list">
+        <p><b>이름</b><span id="name">윤하진</span></p>
+        <p><b>키</b><span id="height">185cm</span></p>
+        <p><b>외형</b><span id="look">냉백색 피부, 검은 머리, 깊은 갈색 눈동자. 화이트 셔츠와 슬랙스를 즐겨 입는다.</span></p>
+        <p><b>직업</b><span id="job">IT 스타트업 대표</span></p>
+        <p><b>거주지</b><span id="home">강남 타워팰리스 펜트하우스</span></p>
+        <p><b>계약사항</b><span id="contract">매일 청소, 빨래, 설거지, 집안 관리 포함 / 월 300만원</span></p>
+        <p><b>배경</b><span id="backstory">젊은 나이에 회사를 성공시킨 대표. 완벽하게 정돈된 공간에 집착한다.</span></p>
+        <p><b>특이사항</b><span id="special">서재 출입 금지. 청소 상태를 매우 세세하게 확인한다.</span></p>
+      </div>
+
+      <a id="applyLink" href="https://crack.wrtn.ai/detail/69ec5b9fdf49e422f80f9a27" class="apply-btn">고용신청하기</a>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+  const boys = {
+    hajin: {
+      image: "hajin.png",
+      name: "윤하진",
+      tag: "완벽한 공간을 유지하려는 고용주",
+      height: "185cm",
+      look: "냉백색 피부, 검은 머리, 깊은 갈색 눈동자. 화이트 셔츠와 슬랙스를 즐겨 입는다.",
+      job: "IT 스타트업 대표",
+      home: "강남 타워팰리스 펜트하우스",
+      contract: "매일 청소, 빨래, 설거지, 집안 관리 포함 / 월 300만원",
+      backstory: "젊은 나이에 회사를 성공시킨 대표. 완벽하게 정돈된 공간에 집착한다.",
+      special: "서재 출입 금지. 청소 상태를 매우 세세하게 확인한다.",
+      link: "https://crack.wrtn.ai/detail/69ec5b9fdf49e422f80f9a27"
+    },
+    boy2: {
+      image: "hirlo.png",
+      name: "이휘로",
+      tag: "끝났지만 아직 끝나지 않은 관계",
+      height: "187cm",
+      look: "자연스럽게 넘긴 갈발, 부드러운 눈매, 검정색 목티 차림이 많다.",
+      job: "외국계 컨설팅 기업 팀장",
+      home: "한남동 고급 오피스텔",
+      contract: "주 5회 청소 및 식사 준비 / 월 350만원",
+      backstory: "오랜 해외 생활 이후 귀국, 이전과 다른 공간에서 우연히 다시 마주하게 된다.",
+      special: "밤 시간대 호출이 잦다.",
+      link: "secret.html"
+    },
+    boy3: {
+      image: "3.png",
+      name: "???",
+      tag: "???",
+      height: "184cm",
+      look: "부드러운 백색 머리, 올라간 눈매, 단정하지만 편안한 차림.",
+      job: "???",
+      home: "???",
+      contract: "???",
+      backstory: "???",
+      special: "???",
+      link: "secret.html"
+    }
+  };
+
+  function showBoy(key) {
+    const b = boys[key];
+
+    document.getElementById("boyImage").src = b.image;
+    document.getElementById("boyName").innerText = b.name;
+    document.getElementById("boyTag").innerText = b.tag;
+    document.getElementById("name").innerText = b.name;
+    document.getElementById("height").innerText = b.height;
+    document.getElementById("look").innerText = b.look;
+    document.getElementById("job").innerText = b.job;
+    document.getElementById("home").innerText = b.home;
+    document.getElementById("contract").innerText = b.contract;
+    document.getElementById("backstory").innerText = b.backstory;
+    document.getElementById("special").innerText = b.special;
+    document.getElementById("applyLink").href = b.link;
+
+    document.querySelectorAll(".boy-tabs button").forEach(btn => {
+      btn.classList.remove("active");
+    });
+    event.target.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
